@@ -1,0 +1,97 @@
+<html>
+  <head>
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!--Import materialize.css-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!--Let browser know website is optimized for mobile-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>DOIT</title>
+    <style media="screen">
+        .row:nth-child(odd) canvas {
+            float: right;
+        }
+        #resultSearch canvas {
+            margin-left:40%;
+        }
+    </style>
+  </head>
+
+  <body>
+      <nav>
+          <div class="nav-wrapper orange darken-1  z-depth-3">
+              <a href="#!" class="brand-logo center">DOIT</a>
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                  <li><a href="">Driver</a></li>
+                  <li><a href="">Sunday Delivery</a></li>
+              </ul>
+          </div>
+    </nav>
+    <ul class="sidenav" id="mobile-demo">
+        <li><a href="">Driver</a></li>
+        <li><a href="">Sunday Delivery</a></li>
+    </ul>
+    <div class="container">
+        <div class="row" id="load">
+            <div class="col s12 m6">
+                <form action="#">
+                    <div class="file-field input-field">
+                        <div class="btn">
+                        <span>Carica File</span>
+                        <input type="file" name="xlfile" id="comp" />
+                      </div>
+                      <div class="file-path-wrapper">
+                        <input class="file-path validate" type="text">
+                      </div>
+                    </div>
+                </form>
+            </div>
+            <div class="input-field col s12 m6">
+                <button class="btn" type="button" name="button" onclick="daList()">Start</button>
+            </div>
+        </div>
+        <div class="row" style="margin-top:30px;" id="main">
+            <div class="col s12" id='tabsDA'>
+            </div>
+            <div id="test1" class="col s12">
+                <div class="row">
+                    <div class="input-field col s12 m5" id="dalist">
+                    </div>
+                    <div class="input-field col s12 m5" id="wavelist">
+                    </div>
+                    <div class="input-field col s12 m2" id="addDA">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12" id="resultDA">
+                    </div>
+                </div>
+            </div>
+            <div id="test2" class="col s12">
+                <div class="row">
+                    <div class="col s12" id="search">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12" id="resultSearch">
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--JavaScript at end of body for optimized loading-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/4.6.3/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+    <script src="unitedtools.js"></script>
+    <script>
+    	$(document).ready(function(){
+            $('.sidenav').sidenav();
+            $("#comp").change(handleFileSelect);
+    	});
+    </script>
+  </body>
+</html>
